@@ -17,7 +17,7 @@ class GameScene: SKScene {
     var oceanSprite2: Ocean?
     var planeSprite: Plane?
     var islandSprite: Island?
-    var cloudSprites: [Cloud] = []
+    var cloudSprite: Cloud?
     
     //var config: Config?
     
@@ -50,12 +50,8 @@ class GameScene: SKScene {
         self.addChild(islandSprite!)
         
         // add clouds
-        for index in 0...3
-        {
-            let cloud: Cloud = Cloud()
-            cloudSprites.append(cloud)
-            self.addChild(cloudSprites[index])
-        }
+        self.cloudSprite = Cloud()
+        self.addChild(cloudSprite!)
         
         let engineSound = SKAudioNode(fileNamed: "engine.mp3")
         self.addChild(engineSound)
@@ -122,11 +118,10 @@ class GameScene: SKScene {
         
         CollisionManager.squaredRadiusCheck(scene: self, object1: planeSprite!, object2: islandSprite!)
         
-        for cloud in cloudSprites
-        {
-            cloud.Update()
-            CollisionManager.squaredRadiusCheck(scene: self, object1: planeSprite!, object2: cloud)
-        }
+        
+        self.cloudSprite?.Update()
+            CollisionManager.squaredRadiusCheck(scene: self, object1: planeSprite!, object2: cloudSprite!)
+        
         
         if(ScoreManager.Lives < 1)
         {
