@@ -56,7 +56,7 @@ class Cloud: GameObject
     
     override func Start()
     {
-        self.zPosition = 3
+        self.zPosition = 4
         self.Reset()
         self.alpha = 0.5
     }

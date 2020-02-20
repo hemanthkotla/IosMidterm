@@ -35,7 +35,7 @@ class Plane: GameObject
     
     override func Start()
     {
-        self.zPosition = 2
+        self.zPosition = 3
     }
     
     override func Update()

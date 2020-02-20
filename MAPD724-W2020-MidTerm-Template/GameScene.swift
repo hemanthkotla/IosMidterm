@@ -133,6 +133,8 @@ class GameScene: SKScene {
         self.cloudSprite?.Update()
             CollisionManager.squaredRadiusCheck(scene: self, object1: planeSprite!, object2: cloudSprite!)
         
+        self.night1?.Update()
+        self.night2?.Update()
         
         if(ScoreManager.Lives < 1)
         {
@@ -140,7 +142,15 @@ class GameScene: SKScene {
         }
         if(ScoreManager.Score > 500)
         {
-        
+            self.night1 = Night()
+            self.night1?.position = CGPoint(x: 0, y: 0 )
+            self.addChild(night1!)
+            
+            self.night2 = Night()
+            self.night2?.position = CGPoint(x: 800, y: 0)
+            self.addChild(night2!)
+            
+            
         }
     }
 }

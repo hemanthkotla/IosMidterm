@@ -63,7 +63,7 @@ class Island: GameObject
     
     override func Start()
     {
-        self.zPosition = 1
+        self.zPosition = 2
         self.Reset()
         self.dx = 5.0
     }

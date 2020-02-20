@@ -6,7 +6,7 @@ class Night : GameObject
     //constructor
     init()
     {
-        super.init(imageString: "night", initialScale: 1.0)
+        super.init(imageString: "level2", initialScale: 1.0)
         Start()
     }
     
@@ -32,7 +32,7 @@ class Night : GameObject
     
     override func Start()
     {
-        self.zPosition = 0
+        self.zPosition = 1
         //self.Reset()
         self.dx = 5.0
     }
