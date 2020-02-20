@@ -37,12 +37,12 @@ class GameScene: SKScene {
         self.addChild(oceanSprite1!)
         
         self.oceanSprite2 = Ocean()
-        self.oceanSprite2?.position = CGPoint(x: 896, y: 0)
+        self.oceanSprite2?.position = CGPoint(x: 800, y: 0)
         self.addChild(oceanSprite2!)
         
         // add plane
         self.planeSprite = Plane()
-        self.planeSprite?.position = CGPoint(x: -575, y: 0)
+        self.planeSprite?.position = CGPoint(x: -385, y: 0)
         self.addChild(planeSprite!)
         
         // add island
@@ -78,17 +78,17 @@ class GameScene: SKScene {
     
     func touchDown(atPoint pos : CGPoint)
     {
-        self.planeSprite?.TouchMove(newPos: CGPoint(x: -575, y: pos.y))
+        self.planeSprite?.TouchMove(newPos: CGPoint(x: -385, y: pos.y))
     }
     
     func touchMoved(toPoint pos : CGPoint)
     {
-        self.planeSprite?.TouchMove(newPos: CGPoint(x: -575, y: pos.y))
+        self.planeSprite?.TouchMove(newPos: CGPoint(x: -385, y: pos.y))
     }
     
     func touchUp(atPoint pos : CGPoint)
     {
-        self.planeSprite?.TouchMove(newPos: CGPoint(x: -575, y: pos.y))
+        self.planeSprite?.TouchMove(newPos: CGPoint(x: -385, y: pos.y))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)

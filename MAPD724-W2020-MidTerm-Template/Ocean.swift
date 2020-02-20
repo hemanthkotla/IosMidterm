@@ -19,7 +19,7 @@ class Ocean : GameObject
     {
            
         // check top boundary
-        if(self.position.x <= -896) // note maybe reset earlier
+        if(self.position.x <= -800) // note maybe reset earlier
         {
             Reset()
         }
@@ -27,7 +27,7 @@ class Ocean : GameObject
     
     override func Reset()
     {
-        self.position.x = 896
+        self.position.x = 800
     }
     
     override func Start()
