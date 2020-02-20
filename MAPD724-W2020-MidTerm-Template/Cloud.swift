@@ -1,3 +1,13 @@
+//Name : Hemanth Kotla
+//Student Id : 301084656
+// test date : 19-Feb-2020
+
+
+
+
+
+
+
 import SpriteKit
 import GameplayKit
 
@@ -21,7 +31,7 @@ class Cloud: GameObject
     override func CheckBounds()
     {
         // bottom boundary
-        if(self.position.x < -801)
+        if(self.position.x < -896)
         {
             self.Reset()
         }
@@ -36,7 +46,7 @@ class Cloud: GameObject
     
     override func Reset()
     {
-        self.position.x = 801
+        self.position.x = 896
         let randomX:Int = (randomSource?.nextInt(upperBound: 614))! - 307
         self.position.y = CGFloat(randomX)
         self.dx = CGFloat((randomSource?.nextUniform())! * 5.0) + 5.0

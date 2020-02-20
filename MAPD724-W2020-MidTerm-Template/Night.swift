@@ -1,20 +1,12 @@
-//Name : Hemanth Kotla
-//Student Id : 301084656
-// test date : 19-Feb-2020
-// Made changes for ocean, plane and island
-
-
-
-
 import SpriteKit
 import GameplayKit
 
-class Ocean : GameObject
+class Night : GameObject
 {
     //constructor
     init()
     {
-        super.init(imageString: "ocean", initialScale: 1.0)
+        super.init(imageString: "night", initialScale: 1.0)
         Start()
     }
     

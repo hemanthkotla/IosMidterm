@@ -1,3 +1,11 @@
+//Name : Hemanth Kotla
+//Student Id : 301084656
+// test date : 19-Feb-2020
+// Made changes for ocean, plane and island
+
+
+
+
 
 import UIKit
 import AVFoundation
@@ -18,6 +26,9 @@ class GameScene: SKScene {
     var planeSprite: Plane?
     var islandSprite: Island?
     var cloudSprite: Cloud?
+    var night1 : Night?
+    var night2 : Night?
+    
     
     //var config: Config?
     
@@ -126,6 +137,10 @@ class GameScene: SKScene {
         if(ScoreManager.Lives < 1)
         {
             self.gameManager?.PresentEndScene()
+        }
+        if(ScoreManager.Score > 500)
+        {
+        
         }
     }
 }
